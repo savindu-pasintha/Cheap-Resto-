@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# author by savindu pasingtha
+## Techologies Reactjs | Nodejs | Machinlearning | Database 
+#     @appbaseio/reactivemaps": "^3.0.0",
+#    "@appbaseio/reactivesearch": "^3.30.3",
+#    "@reduxjs/toolkit": "^1.8.1",
+#    "@testing-library/jest-dom": "^5.16.2",
+#    "@testing-library/user-event": "^13.5.0",
+#    "react": "^17.0.2",
+#    "react-dom": "^17.0.2",
+#    "react-icons": "^4.3.1",
+#    "react-redux": "^8.0.1",
+#    "react-router": "^6.3.0",
+#    "react-router-dom": "^6.3.0",
+#    "react-scripts": "5.0.0",
+#    "reactstrap": "^9.0.2",
+#    "sass": "^1.49.7",
+#    "web-vitals": "^2.1.4"
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
