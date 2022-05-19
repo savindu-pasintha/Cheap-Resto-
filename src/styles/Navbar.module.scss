@@ -44,10 +44,11 @@
 
         li {
             font-size: 1.1rem;
-            font-weight: 500;
+            font-weight: 200;
             color: whitesmoke;
             cursor: pointer;
             transition: color ease 0.3s;
+            font-style: initial;
 
             &:hover {
                 color: var(--color-btn);
@@ -61,7 +62,7 @@
                 padding: 0.5rem 2rem;
             }
 
-           
+
         }
     }
 

@@ -10,7 +10,8 @@ import {
   Routes,
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
   //const paths = useSelector();
@@ -45,9 +46,24 @@ const Navbar = () => {
   useEffect(() => {
     getPaths();
   }, []);
-
+  const signoutclick = async () => {
+    localStorage.setItem("u", "");
+    localStorage.setItem("p", "");
+    localStorage.setItem("paths", "notEnabled")
+    toast.success('Successfull Sign out.', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    window.location.reload();
+  }
   return (
     <nav className={styles.nav}>
+      <ToastContainer />
       <div className={styles.logoContainer}>
         <span className={styles.logo}>Cheap-Resto</span>
       </div>
@@ -69,6 +85,7 @@ const Navbar = () => {
         <li> <Link to="/reservation" style={{ color: 'white' }}>{paths ? "Search" : ""}</Link></li>
         <li> <Link to="/signin" style={{ color: 'white' }}>{sign}</Link></li>
         <li> <Link to="/signup" style={{ color: 'white' }}>Sign up</Link></li>
+        <li> <Link to="/signout" onClick={() => { signoutclick(); }} style={{ color: 'white' }}>Sign out</Link></li>
         <li> <Link to="/about" style={{ color: 'white' }}>About</Link></li>
         <li> <Link to="/" style={{ color: 'white' }}>{paths ? "More" : ""}</Link></li>
       </ul>

@@ -23,8 +23,12 @@ import desserts from "./Images/desserts.jpeg";
 import sandwich from "./Images/sandwich.jpeg";
 import '../styles/Aisearch.css';
 import { AiFillStar } from 'react-icons/ai';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class Aisearch extends Component {
+    
+
+
     onData(resturant) {
         const image =
             resturant.cuisine === "Bar Food"
@@ -52,7 +56,25 @@ class Aisearch extends Component {
         //41697649
         return (
             <ReactiveList.ResultListWrapper>
-                <ResultList key={resturant._id} id={resturant._id} onMouseMove={() => { document.getElementById(resturant._id).style.color = "gold"; }} style={{ background: "#F9CEEE" }} onClick={() => { alert(resturant._id); }}>
+                <ResultList
+                    key={resturant._id} id={resturant._id}
+                    onMouseMove={() => { document.getElementById(resturant._id).style.color = "gold"; }} style={{ background: "#F9CEEE" }}
+                    onClick={() => {
+                        var data = "Name : " + name + "." +
+                            '\n' + "Rating  : " + rating + "." +
+                            '\n' + "Address : " + address + ".";
+                        toast.info(data, {
+                            position: "bottom-center",
+                            autoClose: 3000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        });
+                        //setTimeout(() => { this.navigate('/book'); /**window.location.href = "/book"; */ }, 1000)
+
+                    }}>
                     <ResultList.Content>
                         <ResultList.Title> {rating} {name}</ResultList.Title>
                         <ResultList.Description>
@@ -98,6 +120,7 @@ class Aisearch extends Component {
     render() {
         return (
             <div className="container-fluid" style={{ width: "100%" }}>
+                <ToastContainer />
                 {/** app="yelp-app" app="cheap-resto-app"*/}
                 <ReactiveBase
                     app="yelp-app"
@@ -132,7 +155,7 @@ class Aisearch extends Component {
                             <div className="col-lg-7 dataSearch">
                                 <SearchBox
                                     componentId="nameReactor"
-                                    placeholder="Search for Restaurants, Bars"
+                                    placeholder="Search For Restaurants, Bars..."
                                     dataField="name"
                                     searchInputId="NameSearch"
                                     iconPosition="left"

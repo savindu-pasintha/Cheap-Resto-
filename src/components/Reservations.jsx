@@ -1,7 +1,7 @@
 import styles from "../styles/Reservations.module.scss";
 import restaurant from "../assets/restaurant.jpg";
 import { BsArrowRight } from "react-icons/bs";
-
+import { Link } from "react-router-dom";
 const Reservations = () => {
   return (
     <div className={styles.container}>
@@ -14,8 +14,7 @@ const Reservations = () => {
               <h2>Make a Romantic Atmosphere Here</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iure
-              tempore eius suscipit fugit nam?
+             
             </p>
           </div>
         </div>
@@ -33,16 +32,18 @@ const Reservations = () => {
                   <input type="date" className={styles.date} />
                   <input type="time" className={styles.time} />
                 </div>
-                <button>
-                  <span>Book Now</span>
-                  <BsArrowRight />
-                </button>
+                <Link to="/reservation">
+                  <button>
+                    <span>Book Now</span>
+                    <BsArrowRight />
+                  </button>
+                </Link>
               </div>
             </form>
           </div>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

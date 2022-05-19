@@ -19,9 +19,12 @@ import Footer from "./components/Footer";
 import Aisearch from './components/Aisearch';
 import Navbar from './components/Navbar';
 import Login from "./components/Login";
+import Book from './components/Book';
 import { useSelector, useDispatch } from 'react-redux';
 import { enableNavigationNamesAction } from './ReduxToolit/Reducer_Actions';
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const storeObj = useSelector((state) => state.storeReducer.value);
   const dst = useDispatch();
@@ -82,17 +85,26 @@ function App() {
     localStorage.setItem("p", "");
     return (<Login type="Sign up" />)
   }
+  const Signout = () => {
+    return (<><Login type="Sign in" /></>)
+  }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<LoadHome />} />
-          <Route exact path="/home" element={<LoadHome />} />
-          <Route path="/about" element={<><Navbar /><AboutUs /><Footer /></>} />
-          <Route path="/reservation" element={<><Navbar /><Aisearch /><Footer /></>} />
+          {(localStorage.getItem("paths") == "enabled") ?
+            <> <Route exact path="/" element={<LoadHome />} />
+              <Route exact path="/home" element={<LoadHome />} />
+              <Route exact path="/book" element={<><Navbar /><Book /><Footer /></>} />
+              <Route path="/about" element={<><Navbar /><AboutUs /><Footer /></>} />
+              <Route path="/reservation" element={<><Navbar /><Aisearch /><Footer /></>} />
+            </>
+            : <Route path="*" element={<><Navbar /><Login /><Footer /></>} />
+          }
           <Route path="/signin" element={<><Navbar /><Login /><Footer /></>} />
           <Route path="/signup" element={<><Navbar /><Signup /><Footer /></>} />
+          <Route path="/signout" element={<><Navbar /><Signout /><Footer /></>} />
           <Route path="*" element={<><Navbar /><Login /><Footer /></>} />
         </Routes>
       </BrowserRouter>
