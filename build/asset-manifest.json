@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6f66bef.css",
+    "main.js": "/static/js/main.09e6c530.js",
+    "static/media/bg1.jpg": "/static/media/bg1.853f2f9b790c15aed37e.jpg",
+    "static/media/homeimage.jpg": "/static/media/homeimage.5ccdebb7d474ac430c37.jpg",
+    "static/media/eastern.svg": "/static/media/eastern.d4be5714a8ded0b1a2702d85ce581ad8.svg",
+    "static/media/bgfood.jpg": "/static/media/bgfood.10da9d7d84f90f4371e1.jpg",
+    "static/media/korean.svg": "/static/media/korean.e935a61acdd964a7603e9519ce3e1e4b.svg",
+    "static/media/eating.jpg": "/static/media/eating.9f9bdd11c92920e52ac2.jpg",
+    "static/media/restaurant.jpg": "/static/media/restaurant.f056cc774f73eaa536ff.jpg",
+    "static/media/western.svg": "/static/media/western.772f008d87d204177275d79e57979f45.svg",
+    "static/media/japan.svg": "/static/media/japan.a1b4af1aa6089504df7cb88011730289.svg",
+    "static/media/americanFood.jpg": "/static/media/americanFood.0c90d0ccc37b90c98355.jpg",
+    "static/media/logo2.svg": "/static/media/logo2.6860d4054415f0e2bcb201e7b1b05710.svg",
+    "static/media/logo4.svg": "/static/media/logo4.9163c0519ac8e66ccb99c1afb904daae.svg",
+    "static/media/logo3.svg": "/static/media/logo3.ffdbd3bdb59ca7350df95ff06752a2f8.svg",
+    "static/media/logo1.svg": "/static/media/logo1.d31f48c4f4d242a41d8c194c031427e3.svg",
+    "index.html": "/index.html",
+    "main.e6f66bef.css.map": "/static/css/main.e6f66bef.css.map",
+    "main.09e6c530.js.map": "/static/js/main.09e6c530.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6f66bef.css",
+    "static/js/main.09e6c530.js"
+  ]
+}
