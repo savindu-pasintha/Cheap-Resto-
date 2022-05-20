@@ -94,7 +94,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           {(localStorage.getItem("paths") == "enabled") ?
-            <> <Route exact path="/" element={<LoadHome />} />
+            <>
+
+              <Route exact path="/" element={<LoadHome />} />
               <Route exact path="/home" element={<LoadHome />} />
               <Route exact path="/book" element={<><Navbar /><Book /><Footer /></>} />
               <Route path="/about" element={<><Navbar /><AboutUs /><Footer /></>} />

@@ -26,9 +26,6 @@ import { AiFillStar } from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 class Aisearch extends Component {
-    
-
-
     onData(resturant) {
         const image =
             resturant.cuisine === "Bar Food"

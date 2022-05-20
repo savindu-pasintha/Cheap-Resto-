@@ -59,13 +59,14 @@ const Navbar = () => {
       draggable: true,
       progress: undefined,
     });
-    window.location.reload();
+    setTimeout(() => { window.location.href = '/signin'; }, 1000);
+
   }
   return (
     <nav className={styles.nav}>
       <ToastContainer />
       <div className={styles.logoContainer}>
-        <span className={styles.logo}>Cheap-Resto</span>
+        <span className={styles.logo} >Cheap-Resto</span>
       </div>
 
       <div className={styles.mobileBars} onClick={() => setNavOpen(true)}>
@@ -85,7 +86,7 @@ const Navbar = () => {
         <li> <Link to="/reservation" style={{ color: 'white' }}>{paths ? "Search" : ""}</Link></li>
         <li> <Link to="/signin" style={{ color: 'white' }}>{sign}</Link></li>
         <li> <Link to="/signup" style={{ color: 'white' }}>Sign up</Link></li>
-        <li> <Link to="/signout" onClick={() => { signoutclick(); }} style={{ color: 'white' }}>Sign out</Link></li>
+        <li onClick={() => { signoutclick(); }} style={{ color: 'white' }}>Sign out</li>
         <li> <Link to="/about" style={{ color: 'white' }}>About</Link></li>
         <li> <Link to="/" style={{ color: 'white' }}>{paths ? "More" : ""}</Link></li>
       </ul>
