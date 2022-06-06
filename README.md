@@ -16,6 +16,8 @@
 #    "sass": "^1.49.7",
 #    "web-vitals": "^2.1.4"
 
+#https://colab.research.google.com/drive/1zje_Qa5F9uc0_AZGa5EudgzcMLHqZTXw#scrollTo=pcjTTGzQqnj8&uniqifier=2
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

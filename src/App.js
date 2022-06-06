@@ -95,7 +95,6 @@ function App() {
         <Routes>
           {(localStorage.getItem("paths") == "enabled") ?
             <>
-
               <Route exact path="/" element={<LoadHome />} />
               <Route exact path="/home" element={<LoadHome />} />
               <Route exact path="/book" element={<><Navbar /><Book /><Footer /></>} />

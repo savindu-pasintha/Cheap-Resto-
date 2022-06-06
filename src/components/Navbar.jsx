@@ -37,12 +37,7 @@ const Navbar = () => {
       throw err;
     }
   }
-  const signout = () => {
-    localStorage.setItem("u", "");
-    localStorage.setItem("p", "");
-    alert("Sign out.");
-    window.location.href = "/signin"
-  }
+ 
   useEffect(() => {
     getPaths();
   }, []);

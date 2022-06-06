@@ -70,7 +70,6 @@ class Aisearch extends Component {
                             progress: undefined,
                         });
                         //setTimeout(() => { this.navigate('/book'); /**window.location.href = "/book"; */ }, 1000)
-
                     }}>
                     <ResultList.Content>
                         <ResultList.Title> {rating} {name}</ResultList.Title>
@@ -84,9 +83,7 @@ class Aisearch extends Component {
                                 <span className="tag">Online Delivering : {online_delivery ? "Yes" : "No"}</span>
                                 <span className="tag">Delivery Now : {delivering_now ? "Yes" : "No"}</span>
                                 <span className="tag">Has Table Booking : {has_table_booking ? "Yes" : "No"}</span>
-
                                 <span className="tag">Price range : {price_range}</span>
-
                             </div>
                         </ResultList.Description>
                     </ResultList.Content>
