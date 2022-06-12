@@ -17,7 +17,7 @@ const FoodCard = ({ foodIcon, ctg, description }) => {
 const Specialities = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
+      <div id="speacialities" className={styles.title}>
         <h1>Speacialities</h1>
         <h2>Our Special Cuisine</h2>
       </div>

@@ -77,13 +77,13 @@ const Navbar = () => {
         </li>
 
         <li> <Link to="/home" style={{ color: 'white' }}>{paths ? "Home" : ""}</Link></li>
-        <li> <Link to="/menu" style={{ color: 'white' }}>{paths ? "Our Menu" : ""}</Link></li>
+        <li> <Link to="/ourmenu" style={{ color: 'white' }}>{paths ? "Our Menu" : ""}</Link></li>
         <li> <Link to="/reservation" style={{ color: 'white' }}>{paths ? "Search" : ""}</Link></li>
         <li> <Link to="/signin" style={{ color: 'white' }}>{sign}</Link></li>
         <li> <Link to="/signup" style={{ color: 'white' }}>Sign up</Link></li>
         <li onClick={() => { signoutclick(); }} style={{ color: 'white' }}>Sign out</li>
         <li> <Link to="/about" style={{ color: 'white' }}>About</Link></li>
-        <li> <Link to="/" style={{ color: 'white' }}>{paths ? "More" : ""}</Link></li>
+        <li> <Link to="/more" style={{ color: 'white' }}>{paths ? "More" : ""}</Link></li>
       </ul>
     </nav>
   );

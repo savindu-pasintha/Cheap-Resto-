@@ -15,7 +15,9 @@
     font-family: "Poppins", sans-serif;
     //font-family: 'Architects Daughter', cursive;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 /* Track */
 ::-webkit-scrollbar-track {
     background: var(--color-bg);

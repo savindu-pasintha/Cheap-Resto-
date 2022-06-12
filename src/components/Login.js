@@ -188,7 +188,8 @@ export default function Login(props) {
                 </div>
                 <br />
                 <div className='div'>
-                    <label>Password</label>
+                    <label > Password  </label>
+                  
                     <br />
                     <input className='input' type="password" placeholder="xxxxxxxx"
                         value={values.password} onChange={(e) => { setValues({ ...values, password: e.target.value }); }} />
@@ -198,14 +199,17 @@ export default function Login(props) {
                     (values.type == "Sign up") ?
                         (
                             <div className='div'>
-                                <label>Comfirm password</label>
+                                <label> Comfirm password</label>
                                 <br />
+                                
                                 <input className='input' type="password" placeholder="xxxxxxxx"
                                     value={values.cpassword} onChange={(e) => { setValues({ ...values, cpassword: e.target.value }); }} />
                             </div>
                         ) :
                         ""
                 }
+               
+               
                 <br />
 
                 <div className='clickbtn'>

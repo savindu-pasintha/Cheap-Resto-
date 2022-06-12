@@ -10,7 +10,6 @@ import {
 import "./styles/App.scss";
 import Home from "./components/Home";
 import Logos from "./components/Logos";
-import Specialities from "./components/Specialities";
 import AboutUs from "./components/AboutUs";
 import Facts from "./components/Facts";
 import Special from "./components/Special";
@@ -20,6 +19,7 @@ import Aisearch from './components/Aisearch';
 import Navbar from './components/Navbar';
 import Login from "./components/Login";
 import Book from './components/Book';
+import Specialities from './components/Specialities';
 import { useSelector, useDispatch } from 'react-redux';
 import { enableNavigationNamesAction } from './ReduxToolit/Reducer_Actions';
 import { ToastContainer, toast } from 'react-toastify';
@@ -100,6 +100,8 @@ function App() {
               <Route exact path="/book" element={<><Navbar /><Book /><Footer /></>} />
               <Route path="/about" element={<><Navbar /><AboutUs /><Footer /></>} />
               <Route path="/reservation" element={<><Navbar /><Aisearch /><Footer /></>} />
+              <Route exact path="/ourmenu" element={<><Navbar /><Special/><Footer /></>} />
+              <Route exact path="/more" element={<><Navbar /><Specialities/><Footer /></>} />
             </>
             : <Route path="*" element={<><Navbar /><Login /><Footer /></>} />
           }
